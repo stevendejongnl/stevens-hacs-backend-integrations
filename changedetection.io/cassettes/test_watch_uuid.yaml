@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - 7c369f24ddf2.redacted.local
+      User-Agent:
+      - python-requests/2.32.5
+    method: GET
+    uri: https://7c369f24ddf2.redacted.local/api/v1/watch/02370013-3bac-499e-acd5-958f57c51aeb
+  response:
+    body:
+      string: '{"body": "", "browser_steps": [{"operation": null, "selector": "",
+        "optional_value": ""}, {"operation": "Click element containing text if exists",
+        "selector": "", "optional_value": "Doorgaan met winkelen"}, {"operation":
+        "Choose one", "selector": "", "optional_value": ""}, {"operation": "Choose
+        one", "selector": "", "optional_value": ""}, {"operation": "Choose one", "selector":
+        "", "optional_value": ""}, {"operation": "Choose one", "selector": "", "optional_value":
+        ""}, {"operation": "Choose one", "selector": "", "optional_value": ""}, {"operation":
+        "Choose one", "selector": "", "optional_value": ""}, {"operation": "Choose
+        one", "selector": "", "optional_value": ""}, {"operation": "Choose one", "selector":
+        "", "optional_value": ""}], "browser_steps_last_error_step": null, "conditions":
+        [{"field": "None", "operator": "None", "value": ""}], "conditions_match_logic":
+        "ALL", "check_count": 62, "check_unique_lines": false, "consecutive_filter_failures":
+        0, "content-type": "text/html;charset=utf-8", "date_created": 1761922322,
+        "extract_text": [], "fetch_backend": "system", "fetch_time": 182.718, "filter_failure_notification_send":
+        true, "filter_text_added": true, "filter_text_removed": true, "filter_text_replaced":
+        true, "follow_price_changes": true, "has_ldjson_price_data": false, "headers":
+        {}, "ignore_text": [], "ignore_status_codes": false, "in_stock_only": true,
+        "include_filters": ["#ppd #corePrice_feature_div .a-price .a-offscreen"],
+        "last_checked": 1762774796, "last_error": false, "last_notification_error":
+        false, "last_viewed": 1762678954, "method": "GET", "notification_alert_count":
+        4, "notification_body": "", "notification_format": "System default", "notification_muted":
+        false, "notification_screenshot": false, "notification_title": "", "notification_urls":
+        [], "page_title": null, "paused": false, "previous_md5": "ff8d5aefd4f69e933f748a82d1b916d8",
+        "previous_md5_before_filters": "2a0bae7cd15ce2802fccdd9f100c959e", "processor":
+        "text_json_diff", "price_change_threshold_percent": null, "proxy": null, "remote_server_reply":
+        "server", "sort_text_alphabetically": false, "strip_ignored_lines": null,
+        "subtractive_selectors": ["header", "#above-dp-container", "div[data-feature-name]",
+        "footer"], "tag": "", "tags": ["fa35ff33-9a6b-4145-99af-86fd7c29276d"], "text_should_not_be_present":
+        [], "time_between_check": {"weeks": null, "days": null, "hours": null, "minutes":
+        null, "seconds": null}, "time_between_check_use_default": true, "time_schedule_limit":
+        {"enabled": false, "monday": {"enabled": false, "start_time": "00:00", "duration":
+        {"hours": "24", "minutes": "0"}}, "tuesday": {"enabled": false, "start_time":
+        "00:00", "duration": {"hours": "24", "minutes": "0"}}, "wednesday": {"enabled":
+        false, "start_time": "00:00", "duration": {"hours": "24", "minutes": "0"}},
+        "thursday": {"enabled": false, "start_time": "00:00", "duration": {"hours":
+        "24", "minutes": "0"}}, "friday": {"enabled": false, "start_time": "00:00",
+        "duration": {"hours": "24", "minutes": "0"}}, "saturday": {"enabled": false,
+        "start_time": "00:00", "duration": {"hours": "24", "minutes": "0"}}, "sunday":
+        {"enabled": false, "start_time": "00:00", "duration": {"hours": "24", "minutes":
+        "0"}}, "timezone": ""}, "title": "Frikandel Broodje", "track_ldjson_price_data":
+        null, "trim_text_whitespace": false, "remove_duplicate_lines": false, "trigger_text":
+        [], "url": "https://www.amazon.nl/gp/product/B0DNKKTZNR", "use_page_title_in_list":
+        null, "uuid": "02370013-3bac-499e-acd5-958f57c51aeb", "webdriver_delay": null,
+        "webdriver_js_execute_code": "", "restock": {"in_stock": null, "price": null,
+        "currency": null, "original_price": null}, "restock_settings": {"in_stock_processing":
+        "off", "price_change_min": 144.0, "price_change_max": 144.0, "price_change_threshold_percent":
+        null, "follow_price_changes": true}, "scheduler_timezone_default": null, "save_button":
+        true, "content_type": "text/html;charset=utf-8", "last_check_status": 200,
+        "history_n": 5, "last_changed": 1762678195, "viewed": true, "link": ["https://www.amazon.nl/gp/product/B0DNKKTZNR"]}
+
+        '
+    headers:
+      CF-RAY:
+      - FILTERED
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 10 Nov 2025 12:44:27 GMT
+      Nel:
+      - FILTERED
+      Report-To:
+      - FILTERED
+      Server:
+      - FILTERED
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - FILTERED
+      vary:
+      - Accept-Encoding, Cookie
+    status:
+      code: 200
+      message: OK
+version: 1
