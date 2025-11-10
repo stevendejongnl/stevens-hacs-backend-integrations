@@ -76,8 +76,12 @@ def rebuild_url_with_new_netloc(request: FixtureRequest, parsed: ParseResult, ra
 def update_host(request: FixtureRequest, random_netloc: str) -> FixtureRequest:
     if hasattr(request, "host"):
         try:
+            # Some Request implementations (e.g. vcr.Request) expose `host` as a
+            # read-only property derived from `uri`. Attempting to set it will
+            # raise AttributeError — treat this as a best-effort operation.
             request.host = random_netloc
-        except RedactError:
+        except (RedactError, AttributeError):
+            # Best-effort only; if host can't be set, skip it.
             pass
 
     return request
