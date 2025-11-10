@@ -3,6 +3,7 @@ import secrets
 from urllib.parse import urlparse, urlunparse, ParseResult
 
 import pytest
+from _pytest.fixtures import FixtureRequest
 
 
 class RedactError(Exception):
@@ -63,7 +64,7 @@ def get_random_netloc() -> str:
     return f"{token}.redacted.local"
 
 
-def rebuild_url_with_new_netloc(request: object, parsed: ParseResult, random_netloc: str) -> object:
+def rebuild_url_with_new_netloc(request: FixtureRequest, parsed: ParseResult, random_netloc: str) -> FixtureRequest:
     new_parsed = parsed._replace(netloc=random_netloc)
     new_uri = urlunparse(new_parsed)
 
@@ -72,7 +73,7 @@ def rebuild_url_with_new_netloc(request: object, parsed: ParseResult, random_net
     return request
 
 
-def update_host(request: object, random_netloc: str) -> object:
+def update_host(request: FixtureRequest, random_netloc: str) -> FixtureRequest:
     if hasattr(request, "host"):
         try:
             request.host = random_netloc
@@ -82,7 +83,7 @@ def update_host(request: object, random_netloc: str) -> object:
     return request
 
 
-def update_host_header(request: object, random_netloc: str) -> object:
+def update_host_header(request: FixtureRequest, random_netloc: str) -> FixtureRequest:
     try:
         headers = getattr(request, "headers", None)
         if headers is not None:
@@ -104,7 +105,7 @@ def update_host_header(request: object, random_netloc: str) -> object:
     return request
 
 
-def randomize_netloc(request: object, parsed: ParseResult, env_netloc: str) -> object:
+def randomize_netloc(request: FixtureRequest, parsed: ParseResult, env_netloc: str) -> FixtureRequest:
     if env_netloc and parsed.netloc == env_netloc:
         random_netloc = get_random_netloc()
 
@@ -115,7 +116,7 @@ def randomize_netloc(request: object, parsed: ParseResult, env_netloc: str) -> o
     return request
 
 
-def before_record_request(request: object, env_netloc: str | None) -> object:
+def before_record_request(request: FixtureRequest, env_netloc: str | None) -> FixtureRequest:
     uri = getattr(request, "uri", None)
     absolute = absolute_uri(uri)
     if not absolute:
